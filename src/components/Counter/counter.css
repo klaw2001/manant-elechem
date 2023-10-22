@@ -1,0 +1,12 @@
+.counter-wrapper{
+	background: linear-gradient(105deg,#6e99e6 ,#093c94);
+}
+.counter-row{
+
+	gap: 15px;
+}
+.counter-col{
+	width: 24% !important;
+	text-align: center;
+}
+
