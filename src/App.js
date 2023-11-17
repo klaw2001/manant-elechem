@@ -7,6 +7,8 @@ import About from "./pages/About";
 import Services from "./pages/Services";
 import Footer from "./components/Footer/Footer";
 import Contact from "./pages/Contact";
+import TermsComp from "./pages/TermsComp";
+import Gallery from "./pages/Gallery";
 
 function App() {
   return (
@@ -20,7 +22,9 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About/>}/>
           <Route path="/services" element={<Services/>}/>
+          <Route path="/gallery" element={<Gallery/>}/>
           <Route path="/contact" element={<Contact/>}/>
+          <Route path="/terms-and-conditions" element={<TermsComp/>}/>
         </Routes>
         <footer>
           <Footer/>

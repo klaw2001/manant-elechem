@@ -13,7 +13,7 @@ const AboutChoose = () => {
             <img src={about} alt="" className="img-fluid" style={{marginTop:'-100px'}}/>
           </Col>
           <Col>
-            <h2 className="fw-bold">Our Enginir 25 year experience in industry</h2>
+            <h2 className="fw-bold">Our Company Has 35 year experience in industry</h2>
             <p className="my-3">
               We have a long and proud history givin emphasis to environment
               social and economic outcomes to deliver places that respond.

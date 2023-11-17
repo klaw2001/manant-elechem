@@ -2,6 +2,8 @@ import React from "react";
 import { Col, Container, Row } from "react-bootstrap";
 
 const Contact = () => {
+  document.title = "Contact"
+
   return (
     <div className="contact-wrapper py-5">
       <Container>

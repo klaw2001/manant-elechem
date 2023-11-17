@@ -12,22 +12,26 @@ import banner from '../../../images/banner.png'
 
 import { Autoplay , Parallax, Pagination, Navigation } from "swiper/modules";
 import MyButton from "../../Button/MyButton";
+import { Link } from "react-router-dom";
 const HomeHero = () => {
   const slides = [
     {
-      title: "Chemical Storage",
-      description: "We specialize in safe and secure chemical storage solutions.",
+      title: "Base Oil Storage",
+      description: "We specialize in safe and secure base oil storage solutions.",
       buttonText: "Learn More",
+      path:'/about'
     },
     {
-      title: "Chemical Distribution",
-      description: "Efficiently delivering chemicals to your doorstep.",
+      title: "Base Oil Distribution",
+      description: "Efficiently delivering base oil to your doorstep.",
       buttonText: "Explore Services",
+      path:'/services'
     },
     {
       title: "Small-Scale Manufacturing",
-      description: "We excel in small-scale chemical manufacturing with precision.",
+      description: "We excel in small-scale base oil manufacturing with precision.",
       buttonText: "Discover Products",
+      path:'/services'
     },
   ];
   return (
@@ -63,7 +67,7 @@ const HomeHero = () => {
           <div className="slide-content text-center text-lg-start">
             <h2 className="global-hero-heading">{slide.title}</h2>
             <p className="fw-light mb-3">{slide.description}</p>
-            <MyButton buttonText={slide.buttonText}/>
+            <Link to={slide.path}><MyButton buttonText={slide.buttonText}/></Link>
           </div>
         </SwiperSlide>
       ))}
