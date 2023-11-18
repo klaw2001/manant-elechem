@@ -14,6 +14,12 @@ const ServicesComp = () => {
   const services = [
     {
       img: ser1,
+      img2: table3,
+      title: "Light Napthenic Oils",
+      para: "Light naphthenic oils are a type of hydrocarbon-based fluid that falls within the category of naphthenic oils. These oils are characterized by their composition, which includes a significant proportion of naphthenic hydrocarbons. Naphthenic hydrocarbons are saturated cyclic compounds, and they are known for their relatively high solvency and good thermal stability.",
+    },
+    {
+      img: ser1,
       img2: table1,
       title: "Heavy Oil Specification",
       para: "Napthenic oils are a type of mineral oil characterized by a high content of naphthenic hydrocarbons. They are often used as lubricants and in various industrial applications. Napthenic oils are known for their excellent thermal stability and resistance to oxidation, making them suitable for use in the production of greases, metalworking fluids, and other lubrication products.",
@@ -23,12 +29,6 @@ const ServicesComp = () => {
       img2: table2,
       title: "Paraffin Waxes",
       para: "Paraffin waxes are a type of mineral wax derived from petroleum. They are known for their low cost and versatility. Paraffin waxes have a wide range of uses, including as candle wax, in the cosmetics and pharmaceutical industries, and as a component in various industrial applications. They can provide moisture resistance, heat insulation, and a smooth finish in different products.",
-    },
-    {
-      img: ser6,
-      img2: table3,
-      title: "Light Napthenic Oils",
-      para: "Light naphthenic oils are a type of hydrocarbon-based fluid that falls within the category of naphthenic oils. These oils are characterized by their composition, which includes a significant proportion of naphthenic hydrocarbons. Naphthenic hydrocarbons are saturated cyclic compounds, and they are known for their relatively high solvency and good thermal stability.",
     },
   ];
 
