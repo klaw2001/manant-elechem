@@ -18,13 +18,14 @@ const Topbar = () => {
             <div className="me-4 ">
               <span className="d-flex align-items-center">
                 <HiMail className="text-white fs-5 me-1" />
-                manant@manantelchem.com 
+                
+                <a href="mailto:manant@manantelchem.com " className='text-text-decoration-none text-white'>manant@manantelchem.com  </a>
               </span>
             </div>
             <div className="div">
               <span className="d-flex align-items-center">
                 <IoCall className="text-white fs-5 " />
-                +91 9327207085 
+                <a href="tel:+919327207085" className='text-text-decoration-none text-white'>+91 9327207085 </a>
               </span>
             </div>
           </div>
