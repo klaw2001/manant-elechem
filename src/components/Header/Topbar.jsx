@@ -14,7 +14,7 @@ const Topbar = () => {
     <Container>
       <Row className="row-cols-1 row-cols-lg-2">
         <Col>
-          <div className="top-bar-inner d-flex text-light justify-content-center justify-content-lg-start flex-column flex-md-row align-items-center">
+          <div className="top-bar-inner d-flex text-light justify-content-between justify-content-lg-start flex-md-row align-items-center">
             <div className="me-4 ">
               <span className="d-flex align-items-center">
                 <HiMail className="text-white fs-5 me-1" />

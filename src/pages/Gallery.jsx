@@ -21,7 +21,7 @@ const Gallery = () => {
         <Container>
           <Row className="row-cols-1 row-cols-md-2 row-cols-lg-3 ">
             {images.map((image, index) => (
-              <Col key={index}>
+              <Col key={index} data-aos="fade-up">
                 <img
                   src={image}
                   height={300}

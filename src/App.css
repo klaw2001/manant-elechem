@@ -46,7 +46,7 @@ button.global-button-one:hover {
 }
 
 .nav-items-flex a {
-  padding: 0px 25px !important;
+  padding: 0px 30px !important;
   text-decoration: none;
 }
 
@@ -396,7 +396,7 @@ button {
 
 @media screen and (max-width:769px) {
   .swiper {
-    padding: 112px 0px !important;
+    padding: 57px 0px !important;
   }
 }
 
@@ -404,4 +404,7 @@ button {
   .swiper {
     padding: 57px 0px !important;
   }
+  h2.global-hero-heading {
+    font-size: 33px;
+}
 }

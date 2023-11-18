@@ -3,18 +3,18 @@ import { Col, Container, Row } from "react-bootstrap";
 import serv from "../../../images/home-service.png";
 import MyButton from "../../Button/MyButton";
 import ServiceHomeCarousel from "./ServiceHomeCarousel";
-import './swiperservice.css';
+import "./swiperservice.css";
 import { Link } from "react-router-dom";
 
 const ServiceHome = () => {
   return (
     <div className="service-home-wrapper py-5" >
       <Container>
-        <Row className="align-items-center row-cols-1 row-cols-md-2">
-          <Col>
+        <Row className="align-items-center row-cols-1 row-cols-md-2" >
+          <Col data-aos="fade-right">
             <div className="about-text">
               <h3 className="mb-3 fw-bold">Why Choose Us?</h3>
-              <p className="pb-3"> 
+              <p className="pb-3">
                 At Manant Elechem, we understand that selecting the right
                 partner for your base oil storage, distribution, and
                 manufacturing needs is a critical decision. Here are some
@@ -40,12 +40,14 @@ const ServiceHome = () => {
                   </span>
                 </li>
               </ul>
-              <Link to='/services'><MyButton buttonText='Learn More'/></Link>
+              <Link to="/services">
+                <MyButton buttonText="Learn More" />
+              </Link>
             </div>
           </Col>
-          <Col className="overflow-hidden">
+          <Col className="overflow-hidden" data-aos="fade-up">
             {/* <img src={serv} alt="" style={{ marginRight: "-200px" }} /> */}
-            <ServiceHomeCarousel/>
+            <ServiceHomeCarousel />
           </Col>
         </Row>
       </Container>

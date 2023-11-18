@@ -143,7 +143,7 @@ export default function TestimonialSwiper() {
   };
 
   return (
-    <div className="testimonial-carousel py-5">
+    <div className="testimonial-carousel py-5" data-aos="fade-up">
       <p className="text-center text-uppercase text-light">Testimonials</p>
       <h2 className="text-center text-light">What Clients Say</h2>
       <Container>

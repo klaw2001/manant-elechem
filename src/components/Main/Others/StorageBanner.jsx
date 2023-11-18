@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 
 const StorageBanner = () => {
   return (
-    <div className="storage-banner py-5">
+    <div className="storage-banner py-5" data-aos="fade-up">
       <Container>
         <div className="storage-text text-light py-5 d-flex justify-content-center flex-column align-items-center text-center"> 
           <span className="text-uppercase fw-bold text-warning">Cant't Find It ?</span>

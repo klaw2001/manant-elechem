@@ -28,6 +28,11 @@ function NavbarX() {
       window.removeEventListener("scroll", handleScroll);
     };
   }, []);
+  const handleMenuItemClick = () => {
+    if (show) {
+      setShow(false);
+    }
+  };
 
   return (
     <Container>
@@ -51,10 +56,11 @@ function NavbarX() {
             >
               <Offcanvas.Header closeButton></Offcanvas.Header>
               <Offcanvas.Body className="">
-                <Nav className="m-auto nav-elements text-dark d-lg-flex align-items-lg-center">
+                <Nav className="m-auto nav-items text-dark d-lg-flex align-items-lg-center">
                   <NavLink
                     to="/"
                     className="page-active text-decoration-none nav-link"
+                    onClick={handleMenuItemClick}
                   >
                     Home
                   </NavLink>
@@ -62,30 +68,39 @@ function NavbarX() {
                   <NavLink
                     to="/about"
                     className="text-decoration-none text-dark nav-link"
+                    onClick={handleMenuItemClick}
                   >
                     About
                   </NavLink>
                   <NavLink
                     to="/services"
                     className="text-decoration-none text-dark nav-link"
+                    onClick={handleMenuItemClick}
                   >
                     Services
                   </NavLink>
                   <NavLink
                     to="/gallery"
                     className="text-decoration-none text-dark nav-link"
+                    onClick={handleMenuItemClick}
                   >
                     Gallery
                   </NavLink>
                   <NavLink
                     to="/contact"
                     className="text-decoration-none text-dark nav-link"
+                    onClick={handleMenuItemClick}
                   >
                     Contact
                   </NavLink>
                   <div className="ms-lg-5">
-                    <Link to='/contact'>
-                      <button className="global-button-one">GET QUOTE</button>
+                    <Link to="/contact">
+                      <button
+                        className="global-button-one"
+                        onClick={handleMenuItemClick}
+                      >
+                        GET QUOTE
+                      </button>
                     </Link>
                   </div>
                 </Nav>

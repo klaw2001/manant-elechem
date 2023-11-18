@@ -4,6 +4,7 @@ import ser1 from "../../../images/ser-1.webp";
 import ser6 from "../../../images/ser-6.jpeg";
 import table1 from "../../../images/heavy-table.jpg";
 import table2 from "../../../images/wax-table.jpg";
+import table3 from "../../../images/table3.png";
 import MyButton from "../../Button/MyButton";
 import { useNavigate } from "react-router-dom";
 
@@ -23,6 +24,12 @@ const ServicesComp = () => {
       title: "Paraffin Waxes",
       para: "Paraffin waxes are a type of mineral wax derived from petroleum. They are known for their low cost and versatility. Paraffin waxes have a wide range of uses, including as candle wax, in the cosmetics and pharmaceutical industries, and as a component in various industrial applications. They can provide moisture resistance, heat insulation, and a smooth finish in different products.",
     },
+    {
+      img: ser6,
+      img2: table3,
+      title: "Light Napthenic Oils",
+      para: "Light naphthenic oils are a type of hydrocarbon-based fluid that falls within the category of naphthenic oils. These oils are characterized by their composition, which includes a significant proportion of naphthenic hydrocarbons. Naphthenic hydrocarbons are saturated cyclic compounds, and they are known for their relatively high solvency and good thermal stability.",
+    },
   ];
 
   return (
@@ -30,7 +37,7 @@ const ServicesComp = () => {
       <Container>
         <Row className="row-cols-1 row-cols-md-1 row-cols-lg-1">
           {services.map((elem, ind) => (
-            <Col key={ind}>
+            <Col key={ind} data-aos="fade-up">
               <Card className="border-0">
                 <div className="d-flex flex-lg-row flex-column">
                   <Card.Img

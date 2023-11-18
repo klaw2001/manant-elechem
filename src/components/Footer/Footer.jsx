@@ -58,8 +58,9 @@ const Footer = () => {
               <h4>Our Address</h4>
               <p className="mt-3">
                 204 Peridot, 24 Urmi Society, Near Urmi Char Rasta, Akota,
-                Vadodara-390 015 Phone : +91-265-2320754 Tel/Fax :
-                +91-265-2320825
+                Vadodara-390 015 Phone:{" "}
+                <a href="tel:+91-265-2960754" className="text-decoration-none text-white">+91-265-2960754 </a> 
+                 Tel/Fax: <a href="tel:+91-265-2960825" className="text-decoration-none text-white">+91-265-2960825</a>
               </p>
             </div>
             <div class="social_profile">
@@ -91,12 +92,23 @@ const Footer = () => {
         <div class="row">
           <div class="col-md-6 col-12">
             <p class="copyright">
-              Copyright © 2019 <Link to='/' className="text-decoration-underline text-light">Manant Elechem Corporation</Link>.
+              Copyright © 2019{" "}
+              <Link to="/" className="text-decoration-underline text-light">
+                Manant Elechem Corporation
+              </Link>
+              .
             </p>
           </div>
           <div class="col-md-6 col-12">
             <p class="copyright">
-              Designed By <a href="https://hrishikeshnetke.in" className="text-decoration-underline text-light">Hrishikesh Netke</a>.
+              Designed By{" "}
+              <a
+                href="https://hrishikeshnetke.in"
+                className="text-decoration-underline text-light"
+              >
+                Hrishikesh Netke
+              </a>
+              .
             </p>
           </div>
         </div>

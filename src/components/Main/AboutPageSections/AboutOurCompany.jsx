@@ -3,7 +3,7 @@ import { Container } from "react-bootstrap";
 
 const AboutOurCompany = () => {
   return (
-    <div className="company-wrapper py-5">
+    <div className="company-wrapper py-5" data-aos="fade-up">
       <Container>
         <h1 className="text-center mb-2 fw-bold">About Our Company</h1>
         <p className="text-center mt-3">

@@ -21,14 +21,14 @@ const AboutServices = () => {
   return (
     <div className="about-service-wrapper py-5 mb-5">
       <Container>
-        <div className="about-service-text text-center py-4">
+        <div className="about-service-text text-center py-4" data-aos="fade-up">
           <h2 className="fs-1 w-50 m-auto fw-bold">
             We Provided Best Industry services For You
           </h2>
         </div>
         <div className="d-flex justify-content-lg-between justify-content-center align-items-center flex-lg-row flex-wrap flex-lg-nowrap gap-4 py-3">
           {cards.map((elem, ind) => (
-            <div className="about-cards" key={ind}>
+            <div className="about-cards" key={ind} data-aos="fade-up">
               <img src={elem.img} alt="" className="img-fluid" />
               <p className="mt-2">{elem.para}</p>
             </div>

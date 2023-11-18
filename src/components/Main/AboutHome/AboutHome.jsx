@@ -8,10 +8,10 @@ const AboutHome = () => {
     <div className="about-home-wrapper py-5">
       <Container>
         <Row className="align-items-center row-cols-1 row-cols-md-2">
-          <Col>
+          <Col data-aos="fade-right">
             <img src={about} alt="" className="img-fluid w-100" />
           </Col>
-          <Col>
+          <Col data-aos="fade-left">
             <div className="about-text">
               <h3 className="mb-3 fw-bold">What We Do ?</h3>
               <p>
