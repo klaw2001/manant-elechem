@@ -22,7 +22,7 @@ const Contact = () => {
           <Col data-aos="fade-left">
             <div>
               <div class="contact-form-wrapper d-flex">
-                <form action="https://formsubmit.co/manant@manantelechem.com" method="POST" class="contact-form text-start">
+                <form action="https://formsubmit.co/manant@manantelchem.com" method="POST" class="contact-form text-start">
                   <p class="description">
                     Feel free to contact us if you need any assistance, any help
                     or another question.
