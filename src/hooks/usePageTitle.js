@@ -1,0 +1,10 @@
+import { useEffect } from "react";
+import { company } from "../data/site";
+
+export default function usePageTitle(title) {
+  useEffect(() => {
+    document.title = title
+      ? `${title} · ${company.name}`
+      : company.name;
+  }, [title]);
+}

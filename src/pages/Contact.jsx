@@ -1,69 +1,105 @@
 import React from "react";
-import { Col, Container, Row } from "react-bootstrap";
+import { FiMail, FiMapPin, FiPhone } from "react-icons/fi";
+import { company } from "../data/site";
+import PageHero from "../components/common/PageHero";
+import Reveal from "../components/common/Reveal";
+import usePageTitle from "../hooks/usePageTitle";
+import "./Contact.css";
 
 const Contact = () => {
-  document.title = "Contact"
+  usePageTitle("Contact");
 
   return (
-    <div className="contact-wrapper py-5">
-      <Container>
-        <Row className="row-cols-1 row-cols-md-2 align-items-center py-5">
-          <Col data-aos="fade-right">
-            <iframe
-              src="https://www.google.com/maps/embed?pb=!1m24!1m12!1m3!1d118129.70528972762!2d73.11745737241426!3d22.294905300987306!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m9!3e6!4m3!3m2!1d22.2971289!2d73.2008848!4m3!3m2!1d22.2949763!2d73.19986039999999!5e0!3m2!1sen!2sin!4v1697805929187!5m2!1sen!2sin"
-              width="600"
-              height="450"
-              allowfullscreen=""
-              loading="lazy"
-              referrerpolicy="no-referrer-when-downgrade"
-              className="w-100"
-            ></iframe>
-          </Col>
-          <Col data-aos="fade-left">
-            <div>
-              <div class="contact-form-wrapper d-flex">
-                <form action="https://formsubmit.co/manant@manantelchem.com" method="POST" class="contact-form text-start">
-                  <p class="description">
-                    Feel free to contact us if you need any assistance, any help
-                    or another question.
+    <>
+      <PageHero eyebrow="Contact" title="Let's talk base oil.">
+        Feel free to contact us if you need any assistance, any help or another
+        question.
+      </PageHero>
+
+      <section className="section contact">
+        <div className="container-x contact__grid">
+          <Reveal className="contact__info">
+            <ul className="contact__list">
+              <li>
+                <FiMapPin aria-hidden="true" />
+                <div>
+                  <h2 className="contact__label">Office</h2>
+                  <address>
+                    {company.address.map((line) => (
+                      <span key={line}>
+                        {line}
+                        <br />
+                      </span>
+                    ))}
+                  </address>
+                </div>
+              </li>
+              <li>
+                <FiPhone aria-hidden="true" />
+                <div>
+                  <h2 className="contact__label">Phone</h2>
+                  <p>
+                    <a href={company.mobile.href}>{company.mobile.label}</a>
                   </p>
-                  <div>
-                    <input
-                      type="text"
-                      class="form-control rounded border-white mb-3 form-input"
-                      id="name"
-                      placeholder="Name"
-                      required
-                    />
-                  </div>
-                  <div>
-                    <input
-                      type="email"
-                      class="form-control rounded border-white mb-3 form-input"
-                      placeholder="Email"
-                      required
-                    />
-                  </div>
-                  <div>
-                    <textarea
-                      id="message"
-                      class="form-control rounded border-white mb-3 form-text-area"
-                      rows="5"
-                      cols="30"
-                      placeholder="Message"
-                      required
-                    ></textarea>
-                  </div>
-                  <div class="submit-button-wrapper">
-                    <input type="submit" value="Send" className="global-button-one" />
-                  </div>
-                </form>
-              </div>
+                  <p>
+                    {company.landlines.map((l, i) => (
+                      <span key={l.label}>
+                        {i > 0 && <span className="contact__sep"> · </span>}
+                        <a href={l.href}>{l.label}</a>
+                      </span>
+                    ))}
+                  </p>
+                </div>
+              </li>
+              <li>
+                <FiMail aria-hidden="true" />
+                <div>
+                  <h2 className="contact__label">Email</h2>
+                  <p>
+                    <a href={`mailto:${company.email}`}>{company.email}</a>
+                  </p>
+                </div>
+              </li>
+            </ul>
+
+            <div className="contact__map">
+              <iframe
+                src={company.mapEmbed}
+                title="Map showing the Manant Elechem office in Vadodara"
+                loading="lazy"
+                allowFullScreen
+                referrerPolicy="no-referrer-when-downgrade"
+              />
             </div>
-          </Col>
-        </Row>
-      </Container>
-    </div>
+          </Reveal>
+
+          <Reveal className="contact__form-wrap" delay={120}>
+            <form action={company.formEndpoint} method="POST" className="quote-form">
+              <p className="quote-form__intro">
+                Tell us what you need and we'll get back to you.
+              </p>
+
+              <div className="field">
+                <label htmlFor="name">Name</label>
+                <input id="name" type="text" name="name" autoComplete="name" required />
+              </div>
+              <div className="field">
+                <label htmlFor="email">Email</label>
+                <input id="email" type="email" name="email" autoComplete="email" required />
+              </div>
+              <div className="field">
+                <label htmlFor="message">Message</label>
+                <textarea id="message" name="message" rows="5" required />
+              </div>
+
+              <button type="submit" className="btn btn--ink quote-form__submit">
+                <span>Send message</span>
+              </button>
+            </form>
+          </Reveal>
+        </div>
+      </section>
+    </>
   );
 };
 

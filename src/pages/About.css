@@ -1,0 +1,138 @@
+.about-company__grid {
+  display: grid;
+  gap: 40px;
+}
+
+.about-company .h2 {
+  max-width: 16ch;
+}
+
+.about-company__sign {
+  margin-top: 36px;
+  padding-top: 26px;
+  border-top: 1px solid var(--rule);
+  display: grid;
+  gap: 10px;
+  color: var(--ink-soft);
+}
+
+.about-company__sign strong {
+  color: var(--ink);
+}
+
+@media (min-width: 900px) {
+  .about-company__grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 96px;
+    align-items: start;
+  }
+}
+
+/* ---------- Pillars ---------- */
+
+.pillars {
+  padding-bottom: clamp(72px, 10vw, 136px);
+}
+
+.pillar {
+  display: grid;
+  gap: 40px;
+  align-items: center;
+  padding-block: clamp(48px, 7vw, 88px);
+  border-top: 1px solid var(--rule);
+}
+
+.pillar__media {
+  overflow: hidden;
+}
+
+.pillar__media img {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  transition: transform 1.2s var(--ease-out);
+}
+
+.pillar:hover .pillar__media img {
+  transform: scale(1.04);
+}
+
+.pillar__no {
+  display: block;
+  margin-bottom: 18px;
+  font-size: 0.8rem;
+  font-weight: 800;
+  letter-spacing: 0.16em;
+  color: var(--blue);
+}
+
+.pillar__copy .h2 {
+  margin-bottom: 22px;
+  font-size: clamp(1.8rem, 3.2vw, 2.6rem);
+}
+
+@media (min-width: 900px) {
+  .pillar {
+    grid-template-columns: 1.1fr 1fr;
+    gap: 96px;
+  }
+
+  .pillar--flip .pillar__media {
+    order: 2;
+  }
+}
+
+/* ---------- Plant ---------- */
+
+.plant__grid {
+  display: grid;
+  gap: 48px;
+  align-items: center;
+}
+
+.plant__copy .h2 {
+  margin-bottom: 24px;
+}
+
+.plant__copy .body-copy {
+  margin-bottom: 36px;
+}
+
+.plant__media img {
+  width: 100%;
+  height: auto;
+  border: 1px solid var(--rule-inverse);
+}
+
+@media (min-width: 900px) {
+  .plant__grid {
+    grid-template-columns: 0.9fr 1.3fr;
+    gap: 80px;
+  }
+}
+
+/* ---------- 35 years ---------- */
+
+.about-years__grid {
+  display: grid;
+  gap: 48px;
+  align-items: center;
+}
+
+.about-years__media img {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  clip-path: polygon(8% 0, 100% 0, 100% 100%, 0 100%, 0 12%);
+}
+
+.about-years__copy .h2 {
+  margin-bottom: 24px;
+}
+
+@media (min-width: 900px) {
+  .about-years__grid {
+    grid-template-columns: 1.2fr 1fr;
+    gap: 96px;
+  }
+}

@@ -1,36 +1,35 @@
-import { Route, BrowserRouter as Router, Routes } from "react-router-dom";
-import "./App.css";
-import Topbar from "./components/Header/Topbar";
-import Navbar from "./components/Header/NavbarX";
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import "./components/layout/layout.css";
+import Header from "./components/layout/Header";
+import Footer from "./components/layout/Footer";
+import ScrollToTop from "./components/common/ScrollToTop";
 import Home from "./pages/Home";
 import About from "./pages/About";
 import Services from "./pages/Services";
-import Footer from "./components/Footer/Footer";
+import Gallery from "./pages/Gallery";
 import Contact from "./pages/Contact";
 import TermsComp from "./pages/TermsComp";
-import Gallery from "./pages/Gallery";
 
 function App() {
   return (
-    <div className="">
-      <Router>
-        <header className="position-relative">
-          <Topbar />
-          <Navbar />
-        </header>
+    <Router>
+      <ScrollToTop />
+      <a href="#main" className="skip-link">
+        Skip to content
+      </a>
+      <Header />
+      <main id="main">
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="/about" element={<About/>}/>
-          <Route path="/services" element={<Services/>}/>
-          <Route path="/gallery" element={<Gallery/>}/>
-          <Route path="/contact" element={<Contact/>}/>
-          <Route path="/terms-and-conditions" element={<TermsComp/>}/>
+          <Route path="/about" element={<About />} />
+          <Route path="/services" element={<Services />} />
+          <Route path="/gallery" element={<Gallery />} />
+          <Route path="/contact" element={<Contact />} />
+          <Route path="/terms-and-conditions" element={<TermsComp />} />
         </Routes>
-        <footer>
-          <Footer/>
-        </footer>
-      </Router>
-    </div>
+      </main>
+      <Footer />
+    </Router>
   );
 }
 
