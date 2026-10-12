@@ -95,20 +95,6 @@ const Terms = () => {
 
       <section className="section terms">
         <div className="container-x terms__grid">
-          <nav className="terms__toc" aria-label="Terms sections">
-            <p className="terms__toc-label">Contents</p>
-            <ol>
-              {sections.map((s, i) => (
-                <li key={s.title}>
-                  <a href={`#terms-${i + 1}`}>
-                    <span>{String(i + 1).padStart(2, "0")}</span>
-                    {s.title}
-                  </a>
-                </li>
-              ))}
-            </ol>
-          </nav>
-
           <div className="terms__body">
             {sections.map((s, i) => (
               <Reveal as="section" key={s.title} id={`terms-${i + 1}`} className="terms__section">
